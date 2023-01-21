@@ -1,16 +1,17 @@
-var currentDayEl = $("#currentDay");
-
 // 1. Show the current date at the top
-function displayDate() {
-  const currentDay = moment().format(H)(0 - 23);
-  currentDayEl.text(currentDay);
-}
 
-//      Add it to the `currentDay` element
+var todayDate = moment().format("dddd, MMM Do YYYY");
+$("#currentDay").text(todayDate); // Add it to the `currentDay` element
+
 // 2. Colour code each block based on the current time
 //      Create variables to target each time block
+
+var dataHour9 = $("timeblock");
+
 //      In the html add the data-hour which represent which hour each element is
 //      Create variable for moment().format(H) (0 - 23) e.g. thisHour
+
+var timeNow = moment().format(H)(0 - 23);
 //      timeblocks = $('.timeblock')
 //      timeblocks.each(function() {
 //          var hour = $(this).attr('data-hour');
@@ -24,6 +25,7 @@ function displayDate() {
 //      })
 // 3. Save input to local storage
 //      create variable (an array) called inputs that will store all of the input data
+
 //      Add event listener to all save button
 //          Add event.preventDefault inside the click event listener
 //          Push the input value to inputs array with the format of { time: xx, input: xxx }
