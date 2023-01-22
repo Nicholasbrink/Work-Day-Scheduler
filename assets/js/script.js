@@ -24,7 +24,7 @@ function time() {
   // use the for each jquery function and use "time-block" as the target ID
   $(".time-block").each(function () {
     // takes the full string attrbuted to hour ID thats been inputted and saved (Hour, description) and splits it and takes the first element from the array (hour)
-    var timeblock = parseInt($(this).attr("id").split("hour")[1]);
+    var timeblock = parseInt($(this).attr("id").split("hour")[0]);
 
     if (timeblock < timeNow) {
       //if current time is past the time block then time block is in the past (gray)
@@ -51,11 +51,11 @@ $("#9 .description").val(localStorage.getItem("9"));
 $("#10 .description").val(localStorage.getItem("10"));
 $("#11 .description").val(localStorage.getItem("11"));
 $("#12 .description").val(localStorage.getItem("12"));
-$("#1 .description").val(localStorage.getItem("1"));
-$("#2 .description").val(localStorage.getItem("2"));
-$("#3 .description").val(localStorage.getItem("3"));
-$("#4 .description").val(localStorage.getItem("4"));
-$("#5 .description").val(localStorage.getItem("5"));
+$("#13 .description").val(localStorage.getItem("13"));
+$("#14 .description").val(localStorage.getItem("14"));
+$("#15 .description").val(localStorage.getItem("15"));
+$("#16 .description").val(localStorage.getItem("16"));
+$("#17 .description").val(localStorage.getItem("17"));
 
 time();
 //
