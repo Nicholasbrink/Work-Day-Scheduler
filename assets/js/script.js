@@ -6,11 +6,42 @@ $("#currentDay").text(todayDate); // Add it to the `currentDay` element
 // 2. Colour code each block based on the current time
 //      Create variables to target each time block
 
-var dataHour9 = $("timeblock");
+// SaveBtn event click listener  - set two variables: one for time and one for description
+$(".saveBtn").click(function () {
+  var time = $(this).parent().attr("id"); // use this(selector) to call the parent object and attribute of relevant hour id
+  var description = $(this).siblings(".description").val(); //calls the sibling of the parent object and as its an input tet the val is set to ().
 
-//      In the html add the data-hour which represent which hour each element is
-//      Create variable for moment().format(H) (0 - 23) e.g. thisHour
+  // use localStorage.setItem(values to be saved) to save into local storage
+  localStorage.setItem(time, description);
+});
 
+// In the html add the data-hour which represent which hour each element is
+// Create variable for moment().format(H) (0 - 23) e.g. thisHour
+function time() {
+  var timeNow = moment().format(H)(0 - 23);
+}
+
+//Loop over time-blocks
+$(".time-block").each(function () {
+  // use the for each jquery function and use "time-block" as the target ID
+  var timeblock = parseInt($(this).attr("id").split("hour")[1]); // takes the full string attrbuted to hour ID (Hour, description) and splits it and takes the second element from the array (description)
+
+  if (timeblock < timeNow) {
+    //if current time is past the time block then time block is in the past (gray)
+    $(this).addClass("past");
+    $(this).removeClass("present");
+    $(this).removeClass("future");
+  } else if (timeblock === timeNow) {
+    //timeblock matches current time then in the present (red)
+    $(this).removeClass("past");
+    $(this).addClass("present");
+    $(this).removeClass("future");
+  } else {
+    $(this).removeClass("past"); // if current time hasn't reached the time block then the time block is in the future (green)
+    $(this).removeClass("present");
+    $(this).addClass("future");
+  }
+});
 var timeNow = moment().format(H)(0 - 23);
 //      timeblocks = $('.timeblock')
 //      timeblocks.each(function() {
