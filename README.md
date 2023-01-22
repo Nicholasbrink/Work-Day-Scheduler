@@ -6,7 +6,11 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Website Link
 
+https://nicholasbrink.github.io/Work-Day-Scheduler/
+
 ## Website Screenshot
+
+![Screenshot_20230122_020756](https://user-images.githubusercontent.com/117687727/213897467-ef754cea-5326-4c62-bc34-6ae9259e80a3.png)
 
 ## Credits
 
