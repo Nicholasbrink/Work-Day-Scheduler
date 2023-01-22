@@ -1,5 +1,15 @@
 # Third-Party APIs: Work Day Scheduler
 
+## Table of Contents
+
+1. Description
+2. Website Link
+3. Website screenshots
+4. Credits
+5. Contributing
+6. License
+7. Contributor
+
 ## Description
 
 A simple calendar application that allows a user to save events for each hour of the day and is colour coded according past, present and future entries using Moment.js in the browser and save the event in local storage when the save button is clicked in that timeblock.
@@ -14,11 +24,11 @@ https://nicholasbrink.github.io/Work-Day-Scheduler/
 
 ## Credits
 
-Pod 4 EdX Front End Developer Bootcamp Group
-https://api.jquery.com/click/
-https://api.jquery.com/parent/
-https://stackoverflow.com/questions/11927854/reference-this-parent-with-class-name-of-x
-https://www.w3schools.com/jsref/met_storage_getitem.asp
+1. Pod 4 EdX Front End Developer Bootcamp Group
+2. https://api.jquery.com/click/
+3. https://api.jquery.com/parent/
+4. https://stackoverflow.com/questions/11927854/reference-this-parent-with-class-name-of-x
+5. https://www.w3schools.com/jsref/met_storage_getitem.asp
 
 ## Contributing
 
